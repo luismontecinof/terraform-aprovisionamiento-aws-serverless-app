@@ -4,5 +4,5 @@ variable "region" {
 variable "sandbox_id" {
 }
 variable "backend_endpoint" {
-  default = "https://c5okwfdx0m.execute-api.us-east-1.amazonaws.com/dev/movies"
+  default = "https://1guzxs8lqi.execute-api.us-east-1.amazonaws.com/dev/movies"
 }
