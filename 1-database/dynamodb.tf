@@ -16,7 +16,7 @@ resource "aws_dynamodb_table_item" "item" {
     movie001 = {
       name    = "Sherk"
       actors  = "Cameron Diaz, Mike Myers and Eddie Morphy"
-      release = "2008"
+      release = "2009"
     },
     movie002 = {
       name    = "The Avengers"

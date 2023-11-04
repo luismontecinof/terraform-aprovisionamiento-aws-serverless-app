@@ -4,7 +4,7 @@ resource "aws_s3_bucket_object" "script" {
   content      = replace(file("${path.module}/assets/scripts.js"), "BACKEND_URL", var.backend_endpoint)
   content_type = "text/plain"
   acl          = "public-read"
-  depends_on = [aws_s3_bucket_acl.static-website]
+  depends_on   = [aws_s3_bucket_acl.static-website]
 }
 resource "aws_s3_bucket_object" "static-files" {
   for_each = {
@@ -27,5 +27,5 @@ resource "aws_s3_bucket_object" "static-files" {
   source       = "${path.module}/${each.value.file}"
   content_type = each.value.type
   acl          = "public-read"
-  depends_on = [aws_s3_bucket_acl.static-website]
+  depends_on   = [aws_s3_bucket_acl.static-website]
 }
